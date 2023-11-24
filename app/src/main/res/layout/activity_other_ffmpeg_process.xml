@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".middlewareActivity.VideoProcessActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/btnMergeGIF"
+            android:text="@string/merge_gifs"
+            android:layout_marginTop="12dp"
+            style="@style/ButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMergeAudios"
+            android:text="@string/merge_audios"
+            style="@style/ButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMergeGIF" />
+
+        <Button
+            android:id="@+id/btnAudiosVolumeUpdate"
+            android:text="@string/change_audio_volume"
+            style="@style/ButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMergeAudios" />
+
+        <Button
+            android:id="@+id/btnFastAndSlowAudio"
+            android:text="@string/fast_slow_audio_convert"
+            style="@style/ButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAudiosVolumeUpdate" />
+
+        <Button
+            android:id="@+id/btnCutAudio"
+            android:text="@string/crop_audio_using_time"
+            style="@style/ButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFastAndSlowAudio" />
+
+        <Button
+            android:id="@+id/btnCompressAudio"
+            android:text="@string/compress_audio"
+            style="@style/ButtonStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCutAudio" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

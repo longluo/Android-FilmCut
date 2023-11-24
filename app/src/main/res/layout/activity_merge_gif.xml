@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".videoProcessActivity.AddTextOnVideoActivity">
+
+    <TextView
+        android:id="@+id/tvInputPathGif"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/input_path"
+        android:gravity="center|start"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGifPath" />
+
+    <Button
+        android:id="@+id/btnGifPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="@string/select_gif_file"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInputPathGif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvInputPathGif" />
+
+    <TextView
+        android:id="@+id/txtHintContain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_add_x_and_y_position_of_second_gif_in_percentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvInputPathGif" />
+
+    <EditText
+        android:id="@+id/edtXPos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/x"
+        android:gravity="center"
+        android:maxLength="3"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/edtYPos"
+        app:layout_constraintTop_toBottomOf="@+id/txtHintContain"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtYPos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/y"
+        android:gravity="center"
+        android:maxLength="3"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/edtXPos"
+        app:layout_constraintTop_toBottomOf="@+id/txtHintContain"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtHintContain2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_add_scale_second_gif_in_percentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/edtXPos" />
+
+    <EditText
+        android:id="@+id/edtXScale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/width_scale"
+        android:gravity="center"
+        android:maxLength="3"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/edtYScale"
+        app:layout_constraintTop_toBottomOf="@+id/txtHintContain2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtYScale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/height_scale"
+        android:gravity="center"
+        android:maxLength="3"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/edtXScale"
+        app:layout_constraintTop_toBottomOf="@+id/txtHintContain2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnMerge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/merge_gif"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtXScale"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/mFirstGif"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:gravity="center|top"
+        android:visibility="invisible"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMerge" />
+
+    <TextView
+        android:id="@+id/tvOutputPath"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:gravity="center|top"
+        android:padding="10dp"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMerge" />
+
+    <include
+        android:id="@+id/mProgressView"
+        layout="@layout/progress_view"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

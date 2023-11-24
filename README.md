@@ -1,2 +1,1 @@
-# Android-FilmCut
-Android Video Cut App
+# Android FilmCut
